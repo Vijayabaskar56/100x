@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VJ Resume</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1 class="name">Vijayabaskar R</h1>
       <h3>Full Stack Developer</h3>
-      <p>
+      <!-- <p>
         <a
           href="https://www.linkedin.com/in/vijaya-baskar/"
           target="_blank"
@@ -31,8 +31,8 @@
         ></a>
         | <a href="mailto:vj2k02@gmail.com">Mail</a>
         |
-      </p>
-      <!-- <nav>
+      </p> -->
+      <nav>
         <ul>
           <a href="#" target="_blank" rel="noopener noreferrer"
             ><li>LinkedIn</li></a
@@ -47,34 +47,69 @@
             ><li>Portfolio</li></a
           >
         </ul>
-      </nav> -->
+      </nav>
       <hr />
     </header>
     <span></span>
     <aside>
       <h3>Skills</h3>
-      <label for="HTML" class="progress">HTML5:</label>
-      <progress class="progress-input" value="90" max="100"></progress>
-      <label for="HTML" class="progress">CSS3:</label>
-      <progress class="progress-input" value="70" max="100"></progress>
-      <label for="HTML" class="progress">JavaScript</label>
-      <progress class="progress-input" value="60" max="100"></progress>
-      <label for="HTML" class="progress">React:</label>
-      <progress class="progress-input" value="50" max="100"></progress>
-      <label for="HTML" class="progress">Node</label>
-      <progress class="progress-input" value="40" max="100"></progress>
-      <label for="HTML" class="progress">React-Native</label>
-      <progress class="progress-input" value="50" max="100"></progress>
-      <label for="HTML" class="progress">PHP</label>
-      <progress class="progress-input" value="40" max="100"></progress>
-      <label for="HTML" class="progress">MongoDB</label>
-      <progress class="progress-input" value="40" max="100"></progress>
-      <label for="HTML" class="progress">Git</label>
-      <progress class="progress-input" value="75" max="100"></progress>
-      <label for="HTML" class="progress">Java</label>
-      <progress class="progress-input" value="50" max="100"></progress>
-      <label for="HTML" class="progress">SQL</label>
-      <progress class="progress-input" value="75" max="100"></progress>
+      <label for="HTML5" class="progress">HTML5:</label>
+      <progress
+        class="progress-input"
+        id="HTML"
+        value="90"
+        max="100"
+      ></progress>
+      <label for="css" class="progress">CSS3:</label>
+      <progress class="progress-input" id="css" value="70" max="100"></progress>
+      <label for="javascript" class="progress">JavaScript</label>
+      <progress
+        class="progress-input"
+        id="javascript"
+        value="60"
+        max="100"
+      ></progress>
+      <label for="react" class="progress">React:</label>
+      <progress
+        class="progress-input"
+        id="react"
+        value="50"
+        max="100"
+      ></progress>
+      <label for="node" class="progress">Node</label>
+      <progress
+        class="progress-input"
+        id="node"
+        value="40"
+        max="100"
+      ></progress>
+      <label for="react-native" class="progress">React-Native</label>
+      <progress
+        class="progress-input"
+        id="react-native"
+        value="50"
+        max="100"
+      ></progress>
+      <label for="php" class="progress">PHP</label>
+      <progress class="progress-input" id="php" value="40" max="100"></progress>
+      <label for="mongodb" class="progress">MongoDB</label>
+      <progress
+        class="progress-input"
+        if="mongodb"
+        value="40"
+        max="100"
+      ></progress>
+      <label for="git" class="progress">Git</label>
+      <progress class="progress-input" id="git" value="75" max="100"></progress>
+      <label for="java" class="progress">Java</label>
+      <progress
+        class="progress-input"
+        id="java"
+        value="50"
+        max="100"
+      ></progress>
+      <label for="sql" class="progress">SQL</label>
+      <progress class="progress-input" id="sql" value="75" max="100"></progress>
       <h3>Language</h3>
       <ul>
         <li>English</li>
@@ -82,7 +117,7 @@
         <li>Telugu</li>
       </ul>
     </aside>
-    <aside>
+    <main>
       <article>
         <h3>About Me</h3>
         <p>
@@ -143,7 +178,7 @@
           </li>
         </ul>
       </article>
-    </aside>
+    </main>
     <hr />
     <h3>Contact</h3>
     <form action="submit" method="post">
