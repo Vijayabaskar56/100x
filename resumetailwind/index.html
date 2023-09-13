@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <title>VJ Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body class="">
+    <!-- <div class="prose"> -->
+    <header class="font-bold text-center leading-10">
+      <h1 class="text-4xl my-4">Vijayabaskar R</h1>
+      <h3 class="">Full Stack Developer</h3>
+      <nav>
+        <p>
+          <a
+            class="no-underline text-green-500"
+            href="https://www.linkedin.com/in/vijaya-baskar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          |
+          <a
+            class="no-underline text-green-500"
+            href="https://github.com/Vijayabaskar56"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
+          |
+          <a
+            class="no-underline text-green-500"
+            href="https://twitter.com/VJBass1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mail</a
+          >
+          |
+          <a
+            href="#"
+            class="no-underline text-green-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Twitter(X)
+          </a>
+          |
+          <a
+            href="#"
+            class="no-underline text-green-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Portfolio</a
+          >
+        </p>
+      </nav>
+      <hr class="border-2 border-b-black" />
+    </header>
+    <section class="flex leading-10">
+      <aside class="flex flex-col w-3/12 px-4 py-2">
+        <h2 class="text-2xl font-semibold">Skills</h2>
+        <label for="HTML5" class="progress">HTML5:</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="HTML"
+            value="90"
+            max="100"
+          ></progress>
+        </div>
+        <label for="css" class="progress">CSS3:</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="css"
+            value="70"
+            max="100"
+          ></progress>
+        </div>
+        <label for="javascript" class="progress">JavaScript</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="javascript"
+            value="60"
+            max="100"
+          ></progress>
+        </div>
+        <label for="react" class="progress">React:</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="react"
+            value="50"
+            max="100"
+          ></progress>
+        </div>
+        <label for="node" class="progress">Node</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="node"
+            value="40"
+            max="100"
+          ></progress>
+        </div>
+        <label for="react-native" class="progress">React-Native</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="react-native"
+            value="50"
+            max="100"
+          ></progress>
+        </div>
+        <label for="php" class="progress">PHP</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="php"
+            value="40"
+            max="100"
+          ></progress>
+        </div>
+        <label for="mongodb" class="progress">MongoDB</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            if="mongodb"
+            value="40"
+            max="100"
+          ></progress>
+        </div>
+        <label for="git" class="progress">Git</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="git"
+            value="75"
+            max="100"
+          ></progress>
+        </div>
+        <label for="java" class="progress">Java</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="java"
+            value="50"
+            max="100"
+          ></progress>
+        </div>
+        <label for="sql" class="progress">SQL</label>
+        <div class="border-2 border-black border-solid p-2 py-1">
+          <progress
+            class="bg-green-500 w-full"
+            id="sql"
+            value="75"
+            max="100"
+          ></progress>
+        </div>
+        <h3 class="text-2xl font-semibold pt-4">Language</h3>
+        <ul class="list-disc">
+          <li>English</li>
+          <li>Tamil</li>
+          <li>Telugu</li>
+        </ul>
+      </aside>
+      <main class="flex flex-col w-9/12 px-4 py-2">
+        <section>
+          <article>
+            <h2 class="text-2xl font-semibold">About Me</h2>
+            <p>👋 Hey I am <em class="text-green-500 non-italic">Vijay</em>,</p>
+            <p>
+              Aspiring Software Developer with hands-on experience in PHP,
+              JavaScript and React. I have the Strong ability to learn and grasp
+              new technologies quickly. I am a committed individual, a fast
+              learner, a team player and most importantly a tech-enthusiastic
+              who can adapt himself to the changing tech world.
+            </p>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h3 class="text-2xl font-semibold">Education Background</h3>
+            <div class="border-l-4 border-l-black px-2 my-2 flex flex-col">
+              <span class="text-xl font-semibold text-green-500"
+                >SECONDARY</span
+              >
+              <p>Sourashtra Boys High School, Madurai</p>
+              <p>SSC:[2018] 85.8%</p>
+              <br />
+            </div>
+            <div class="border-l-4 border-l-black px-2 my-2 flex flex-col">
+              <span class="text-xl font-semibold text-green-500"
+                >HIGHER SECONDARY</span
+              >
+              <p>Sourashtra Boys High School, Madurai</p>
+              <p>HSC Science:[2018] 61%</p>
+              <br />
+            </div>
+            <div class="border-l-4 border-l-black px-2 my-2 flex flex-col">
+              <span class="text-xl font-semibold text-green-500">BSc IT</span>
+              <p>The Madura College, Madurai</p>
+              <p>[2018] 92%</p>
+              <br />
+            </div>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h3 class="text-2xl font-semibold">Projects:</h3>
+            <ul class="list-disc">
+              <li>
+                Build a Personal Portfolio Site Using React.js Project Basic
+                Moive
+              </li>
+              <li>
+                Chat App with Socket.io in HTML, CSS & JS, Node as a Backend.
+              </li>
+              <li>
+                Student Attendance Management System with PHP and MySQL as my
+                Collage Final Year
+              </li>
+              <li>App with React using OMDB API</li>
+            </ul>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h3 class="text-2xl font-semibold">Achievements</h3>
+            <ul class="list-disc">
+              <li>
+                Won 2nd Prize in a paper presentation on the topic of
+                "BlockChain Technologies" at the District level Intercollege
+                meetup "GEN 5 2k22" organized by the American College (May 2022)
+              </li>
+              <li>
+                Won 2nd Prize in a paper presentation on the topic of
+                “Artificial intelligence” at the District level Intercollege
+                meetup “Tech Vistara 2022” organized by the Lady Doak Collage
+                (OCT 2022)
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h1>Certificates</h1>
+            <ul class="list-disc">
+              <li></li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </section>
+    <hr class="border-2 border-solid border-t-black" />
+    <fieldset class="bg-gray-100 px-6 py-1">
+      <legend class="text-2xl font-semibold text-center w-full mt-6">
+        Contact Me:
+      </legend>
+      <form
+        action="submit"
+        method="post"
+        class="mt-4 flex flex-col items-center"
+      >
+        <label
+          for="name"
+          class="block text-green-500 w-8/12 text-md font-bold mb-3"
+          >Name</label
+        >
+        <input
+          type="text"
+          class="px-3 py-2 border rounded shadow-md w-8/12 focus:outline-none focus:ring foucs:border-blue-300 mb-3"
+          name="name"
+          id="name"
+        /><br />
+        <label
+          for="email"
+          class="block text-green-500 text-md font-bold mb-3 w-8/12"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="px-3 w-8/12 py-2 mb-3 border rounded shadow-md foucs:outline-none focus:ring focus:border-blue-300"
+        /><br />
+        <label
+          for="message"
+          class="block text-green-500 text-md font-bold mb-3 w-8/12"
+          >Message</label
+        >
+        <textarea
+          name="message"
+          id="message"
+          cols="20"
+          rows="5"
+          class="w-8/12 px-3 mb-3 py-2 border rounded shadow-md focus:outline-none foucs:ring focus:border-blue-300"
+        ></textarea>
+        <input
+          type="submit"
+          value="submit"
+          class="px-4 py-2 mb-3 bg-blue-700 text-white block font-semibold rounded hover:bg-blue-500 focus:outline-none focus:ring focus:bg-blue-500"
+        />
+        <br />
+      </form>
+    </fieldset>
+    <footer class="text-center py-2 bg-black text-white">
+      Made with ❤️ by Vijayabaskar
+    </footer>
+  </body>
+</html>

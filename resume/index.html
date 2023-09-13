@@ -2,38 +2,36 @@
 <html lang="en">
   <head>
     <title>VJ Resume</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1 class="name">Vijayabaskar R</h1>
-      <h3>Full Stack Developer</h3>
-      <!-- <p>
-        <a
-          href="https://www.linkedin.com/in/vijaya-baskar/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn</a
-        >
-        |
-        <a
-          href="https://github.com/Vijayabaskar56"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Github</a
-        >
-        |
-        <a
-          href="https://twitter.com/VJBass1"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-        | <a href="mailto:vj2k02@gmail.com">Mail</a>
-        |
-      </p> -->
+      <h2>Full Stack Developer</h2>
       <nav>
-        <ul>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/vijaya-baskar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          |
+          <a
+            href="https://github.com/Vijayabaskar56"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
+          |
+          <a
+            href="https://twitter.com/VJBass1"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+          | <a href="mailto:vj2k02@gmail.com">Mail</a>
+          |
+        </p>
+        <!-- <ul>
           <a href="#" target="_blank" rel="noopener noreferrer"
             ><li>LinkedIn</li></a
           >
@@ -46,7 +44,7 @@
           <a href="#" target="_blank" rel="noopener noreferrer"
             ><li>Portfolio</li></a
           >
-        </ul>
+        </ul> -->
       </nav>
       <hr />
     </header>
@@ -180,17 +178,19 @@
       </article>
     </main>
     <hr />
-    <h3>Contact</h3>
-    <form action="submit" method="post">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" /> <br />
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" /> <br />
-      <label for="message">Message</label>
-      <textarea name="message" id="message" cols="30" rows="5"></textarea>
-      <br />
-      <input type="submit" value="submit" />
-    </form>
+    <fieldset>
+      <legend>Contact Me:</legend>
+      <form action="submit" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" /> <br />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" /> <br />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <br />
+        <input type="submit" value="submit" />
+      </form>
+    </fieldset>
     <footer>Made with ❤️ by Vijayabaskar</footer>
   </body>
 </html>
