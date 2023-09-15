@@ -1,4 +1,4 @@
-# Reumesite with plane HTML and CSS
+# Resume site with plane HTML and CSS
 
 
 View the Deployed App on Render => https://resume-css.onrender.com/
