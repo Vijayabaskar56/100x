@@ -10,7 +10,7 @@ document
     const message = document.getElementById("message");
     const alert = document.querySelector("#alert");
     const alertempty = document.querySelector("#alertempty");
-
+    
 
     if (name.value != "" && email.value != "" && message.value != "") {
       emailjs
