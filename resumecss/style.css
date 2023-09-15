@@ -114,14 +114,7 @@ progress {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* progress::after {
-  content: attr(value) "%";
-  display: inline;
-  height: 100%; 
-  /* width: attr(value) %; */
-  transform: translateY(-50%);
-  /* background-color: #ff5733; */
-} */
+
 
 progress::-webkit-progress-value {
   background-color: var(--clr-accent); /* Pink fill color */
