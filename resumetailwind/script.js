@@ -1,6 +1,5 @@
 emailjs.init("5whAoyRT_fKNTIC-x");
 
-// Assuming you have form fields with ids "name", "email", "message", and a submit button with id "submit-btn"
 document
   .getElementById("submit-btn")
   .addEventListener("click", function (event) {
