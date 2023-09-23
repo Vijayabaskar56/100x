@@ -2,8 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        chrip: ["chrip", "sans"],
+      },
+    },
   },
-  plugins: [],
-}
-
+  plugins: [require("tailwindcss-debug-screens")],
+};
