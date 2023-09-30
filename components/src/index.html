@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
+    <link href="build.css" rel="stylesheet" />
+  </head>
+  <body class="bg-black text-base font-px-regular text-neutral50">
+    <h2>post button</h2>
+    <button
+      class="bg-twitterBlue text-center sm:w-24 md:w-56 lg:w-96 px-6 py-3 rounded-3xl gap-2.5 shadow-btnShadow backdrop-blur-2xl hover:bg-blue-600 disabled:opacity-50"
+    >
+      post
+    </button>
+    <br />
+    <h2>Create Account Button</h2>
+    <br />
+    <button
+      class="bg-neutral50 text-neutral1000 w-w24 rounded-3xl text-center shadow-btnShadow backdrop-blur-2xl gap-2.5 px-6 py-2 hover:bg-neutral200 disabled:opacity-50"
+    >
+      Create account
+    </button>
+    <br />
+    <h2>Sign up with Google btn</h2>
+    <br />
+    <button
+      class="w-w24 text-center flex text-neutral1000 justify-center items-center bg-neutral50 shadow-buttonStock gap-2 rounded-3xl px-6 py-2 hover:bg-neutral200 disabled:opacity-50"
+    >
+      <img src="../public/images/google.svg" alt="google_icon" srcset="" />Sign
+      up with Google
+    </button>
+    <br />
+    <h2>Sing UP button</h2>
+    <br />
+    <button
+      class="w-80 h-9 px-6 py-2 rounded-3xl shadow border border-twitterBlue border-opacity-25 backdrop-blur-2xl justify-center items-center gap-2.5 inline-flex text-twitterBlue"
+    >
+      Sign up
+    </button>
+    <br />
+    <h2>Follow button</h2>
+    <br />
+    <button
+      class="rounded-3xl text-center text-neutral1000 font-bold bg-neutral50 py-2 px-5 hover:bg-neutral200 disabled:opacity-50 backdrop-blur-2xl"
+    >
+      Follow
+    </button>
+    <br />
+    <h2>Follwing btn</h2>
+    <br />
+    <button
+      class="w-28 h-7 px-5 py-2 rounded-3xl shadow border border-neutral50 border-opacity-25 backdrop-blur-2xl inline-flex items-center justify-center text-neutral50 text-sm font-bold"
+    >
+      Following
+    </button>
+    <br />
+    <h2>for you and following section</h2>
+    <br />
+    <div class="w-fit h-full pb-3 border-b border-neutral700 inline-flex">
+      <button class="px-20">
+        <input
+          id="for-you"
+          class="peer/for-you appearance-none"
+          type="radio"
+          name="status"
+          checked
+        />
+        <label
+          for="for-you"
+          class="w-1/2 peer-checked/for-you:text-neutral-500 peer-checked/for-you:border-twitterBlue peer-checked/for-you:border-b-2 text-neutral50 pb-3 whitespace-nowrap text-center text-base font-px-secondary font-medium"
+          >For you</label
+        >
+      </button>
+      <button class="px-20">
+        <input
+          id="following"
+          class="peer/following appearance-none"
+          type="radio"
+          name="status"
+        />
+        <label
+          for="following"
+          class="w-1/2 peer-checked/following:text-neutral-500 peer-checked/following:border-twitterBlue peer-checked/following:border-b-2 text-neutral50 pb-3 whitespace-nowrap text-center font-px-secondary text-base font-medium"
+          >Following</label
+        >
+      </button>
+      <!-- <button
+        class=" selection:text-neutral-400 selection:border-b-twitterBlue selection:border-b-2"
+      >
+        <div class="pb-3 whitespace-nowrap text-center text-base font-medium text-neutral-50">For You</div>
+      </button>
+      <button
+        class="pb-3 justify-center items-center flex text-stone-50 text-base font-medium selection:border-b-twitterBlue selection:border-b-2"
+      >
+        Following
+      </button> -->
+    </div>
+    <br />
+    <h2>HOme and profile</h2>
+    <br />
+    <button class="">
+      <img
+        src="../public/images/group-default.svg"
+        alt="profile-icon"
+        srcset=""
+      />
+    </button>
+    <br /><br />
+
+    <button class="">
+      <img
+        src="../public/images/home-default.svg"
+        alt="profile-icon"
+        srcset=""
+      />
+    </button>
+    <br />
+    <h2>what happening section</h2>
+    <br />
+    <input type="text" name="input" id="input" class="bg-black" />
+    <br /><br />
+    <div class="flex flex-row justify-start items-center gap-3">
+      <img
+        src="../public/images/user-avatar.svg"
+        alt="user-avatar"
+        class="inline"
+      />
+      <input
+        type="text"
+        name="happening"
+        id="happening"
+        class="bg-neutral1000 focus:outline-none caret-twitterBlue text-neutral-50 placeholder:text-neutral-600"
+        placeholder="What's happening?!"
+      />
+    </div>
+    <br />
+    <h2>input section</h2>
+    <br />
+    <div class="relative">
+      <input
+        type="text"
+        id="Name"
+        class="block px-2.5 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-sm border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+        placeholder=" "
+      />
+      <label
+        for="Name"
+        class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+        >Name</label
+      >
+    </div>
+    <br />
+    <h2>search section</h2>
+    <br />
+    <div
+      class="w-w01 h-10 flex flex-row justify-start items-center rounded-3xl bg-searchbarFill flex-shrink-0 focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+    >
+      <img
+        src="../public/images/search.svg"
+        alt="search-icon"
+        srcset=""
+        class="inline w-5 h-5 mx-2"
+      />
+      <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Search"
+        class="bg-searchbarFill mx-2 focus:outline-none caret-twitterBlue text-neutral-50 placeholder:text-neutral-600"
+      />
+    </div>
+
+    <br />
+    <h2>Card components</h2>
+    <br />
+    <div class="w-96 h-96 px-3.5 py-2.5 bg-white rounded-2xl"></div>
+    <!-- Frame 2 -->
+    <br /><br />
+    <div
+      class="w-96 h-56 px-3.5 py-2.5 bg-orange-600 rounded-2xl flex-col justify-start items-start gap-3 inline-flex"
+    >
+      <div class="h-12 flex-col justify-center items-start gap-3 flex">
+        <div
+          class="self-stretch px-4 py-3 justify-start items-center gap-5 inline-flex"
+        >
+          <button>
+            <img src="../public/images/signup-x.svg" alt="" srcset="" />
+          </button>
+          <div class="text-neutral50 text-base font-bold">Header</div>
+        </div>
+      </div>
+      <div class="self-stretch h-36 px-5 pt-20 pb-5"></div>
+    </div>
+    <br />
+    <h2>tweet component</h2>
+    <br />
+    <div
+      class="w-96 h-full px-4 py-2 border-b border-neutral700 justify-start items-start gap-4 inline-flex"
+    >
+      <img
+        class="w-12 h-12 relative rounded-full"
+        src="../public/images/user-avatar.svg"
+      />
+      <div
+        class="grow shrink basis-0 flex-col justify-start items-start gap-2 inline-flex"
+      >
+        <div class="self-stretch justify-start items-center gap-px inline-flex">
+          <p class="text-base font-medium">
+            Name
+            <span class="text-neutral500 text-base font-normal inline"
+              >@handle • 10h</span
+            >
+          </p>
+        </div>
+        <!-- <div
+          class="self-stretch"
+        > -->
+        <p class="self-stretch h-full">
+          Writing gets easier after the first sentence. Lifting gets easier
+          after the first set. People think and think and think until they
+          finally decide to act. Their attention shifts from internal to lorem10
+        </p>
+        <!-- </div> -->
+        <div class="self-stretch justify-between items-center inline-flex">
+          <div class="flex">
+            <img src="../public/images/comment-sv.svg" alt="comment-icon" />
+            <p class="text-neutral500 px-1">11</p>
+          </div>
+          <div class="flex">
+            <img src="../public/images/retweet-sv.svg" alt="comment-icon" />
+            <p class="text-neutral500 px-1">11</p>
+          </div>
+          <div class="flex">
+            <img src="../public/images/heart-sv.svg" alt="comment-icon" />
+            <p class="text-neutral500 px-1">11</p>
+          </div>
+          <div class="flex">
+            <img src="../public/images/reach-sv.svg" alt="comment-icon" />
+            <p class="text-neutral500 px-1">99.6k</p>
+          </div>
+          <div class="flex">
+            <img
+              src="../public/images/share-sv.svg"
+              alt="share-icon"
+              class="text-neutral700"
+            />
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <br />
+    </div>
+    <p>the end</p>
+  </body>
+</html>
