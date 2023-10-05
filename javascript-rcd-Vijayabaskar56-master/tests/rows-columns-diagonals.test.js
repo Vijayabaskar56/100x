@@ -3,6 +3,7 @@ const { generateCombos } = require("../rows-columns-diagonals.js");
 const _ = require("lodash");
 
 let size = Math.floor(Math.random() * 10);
+// let size = 2;
 let combos = generateCombos(size);
 
 test("1. there should be `n * 2 + 2` distinct combos", () => {
@@ -36,6 +37,7 @@ let isComboIncNMinus1 = _.partialRight(isComboInc, size - 1);
 let inc1combos = _.filter(combos, (combo) => {
   return isComboInc1(combo);
 }).length;
+// console.log(inc1combos);
 
 let incNCombos = _.filter(combos, (combo) => {
   return isComboIncN(combo);

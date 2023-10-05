@@ -102,7 +102,7 @@ const [_1, _2, sizeStr, ..._3] = process.argv;
 
 let size = Number(sizeStr);
 let combos = generateCombos(size);
-// let combos = generateCombos(10);
+// let combos = generateCombos(2);
 
 combos.forEach((combo) => {
   console.log(combo.join(","));
