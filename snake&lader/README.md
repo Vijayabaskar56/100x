@@ -1,4 +1,4 @@
-[] - Include the data structure for keeping track of the game
+## Include the data structure for keeping track of the game
     array of 0 to 100
     [0 ..
     .....
@@ -13,7 +13,7 @@
     win: if player reach 100,
 
 
-[] - Demonstrate the following operations: 
+## Demonstrate the following operations: 
 1.moving along the board
 - player position
 - to move playerPosition + diceValue
@@ -28,7 +28,7 @@
 - win: if player reach 100,
 
 
-2.Explain your choices and reasoning.
+## Explain your choices and reasoning.
 
 - choose array cause that what I am famielr with
 - made bunch of changes through trial and error.
