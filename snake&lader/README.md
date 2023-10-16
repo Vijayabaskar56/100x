@@ -6,7 +6,7 @@
     
     - dice that generate a random number from 1-to-6
 
-    index 0 hold's the game state 
+    index 0 hold's the game state and current Player
     gamestate = [start, ongoing, win]
     start : if dice is 0 (condition)
     ongoing: until player reacher 100,
@@ -29,3 +29,8 @@
 
 
 2.Explain your choices and reasoning.
+
+- choose array cause that what I am famielr with
+- made bunch of changes through trial and error.
+- follow similar approach from tictactoe but need to updated the position in both game engin and orcastation layer.
+- use look up table's for snaks and ladder to swich the position

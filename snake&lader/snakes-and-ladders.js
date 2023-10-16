@@ -1,29 +1,16 @@
-const snakesAndLadder = (playerone, playertwo) => {
+const snakesAndLadder = (playerone, playertwo, position) => {
   // players
   const players = {
-    red: playerone,
-    green: playertwo,
+    "❤️": playerone,
+    "💚": playertwo,
   };
 
   const nextPlayer = {
-    red: green,
-    green: red,
+    "💚": "❤️",
+    "❤️": "💚",
   };
 
   const firstPlayer = Math.random() < 0.5 ? playerone : playertwo;
-
-  const currentPlayer = firstPlayer;
-
-  // Game Board
-  const board = [];
-  for (let cell = 0; cell <= 100; cell++) {
-    board.push("");
-  }
-
-  // roll the dice
-  const rollTheDice = () => {
-    return Math.floor(Math.random() * 6) + 1;
-  };
 
   // ladder look up table
   const ladders = {
@@ -45,18 +32,39 @@ const snakesAndLadder = (playerone, playertwo) => {
     28: 10,
   };
 
-  const isValidated = (position) => {
-    return 1 <= position && position <= 100 && board[move] === "";
-  };
+  // Game Board
+  const board = [];
+  for (let cell = 0; cell <= 100; cell++) {
+    let emoji = "";
+    // lader indicator
+    for (key in ladders) {
+      if (cell == key) {
+        emoji = "🪜";
+      }
+    }
 
-  const gamePlay = (position, currentPlayer, board) => {
+    // snake indicator
+    for (key in snake) {
+      if (cell == key) {
+        emoji = "🐍";
+      }
+    }
+    board.push(emoji || `${cell}`);
+  }
+
+  const gamePlay = (currentPlayer, move) => {
+    //update the board;
+    updatedPosition = position + move;
+    board[updatedPosition] = currentPlayer;
+
     // check for ladder
-    const dice = rollTheDice();
     let isLadder = false;
     for (const key in ladders) {
       if (position === Number(key)) {
         isLadder = true;
         position = ladders[key];
+        board[position] = currentPlayer;
+        updatedPosition = position;
         break;
       }
     }
@@ -67,47 +75,31 @@ const snakesAndLadder = (playerone, playertwo) => {
       if (position === Number(key)) {
         isSnake = true;
         position = snake[key];
+        board[position] = currentPlayer;
+        updatedPosition = position;
         break;
       }
     }
 
-    //update the board;
-    if (isLadder || isSnake) {
-      board[position] = currentPlayer;
-    } else {
-      position = +dice;
-      board[position] = currentPlayer;
-    }
-
-    return 1 <= position && position < 100
-      ? `ongoing`
-      : `${currentPlayer} win the Game`;
+    return [
+      1 <= position && position < 100
+        ? `ongoing ${currentPlayer}`
+        : `${currentPlayer} win the Game`,
+      updatedPosition,
+    ];
   };
 
-  return (player, position) => {
-    // validate right player,
-    if (player !== firstPlayer) {
-      board[0] = `Not Your turn, It's ${firstPlayer}'s turn`;
-      return [false, board[0]];
-    }
-    // validate right move,
-    if (!isValidated(position)) {
-      board[0] = `Invalid move, try again!`;
-      return [false, board[0]];
-    }
-    // Start Game Logic
-    const gameStart = (currentPlayer, position = 0) => {
-      let dice = rollTheDice();
-      if (dice === 1) {
-        board = 1;
-        console.log(`${currentPlayer} can start the play`);
-        board[position] = currentPlayer;
-        board[0] = gamePlay(position, currentPlayer, board);
-      }
-      currentPlayer = nextPlayer[currentPlayer];
-    };
-    return [gameStart, board];
+  return (currentPlayer, move) => {
+    currentPlayer = currentPlayer == playerone ? "❤️" : "💚";
+    console.log(`Dice value is ${move}`);
+    console.log(`CurrentPlayer ${currentPlayer}`);
+    let status;
+    board[0] =`Game Started: CurrentPlayer ${players[currentPlayer]}`;
+    [status, updatedPosition] = gamePlay(currentPlayer, move);
+    board[0] = status;
+    currentPlayer = nextPlayer[currentPlayer];
+    return [board, updatedPosition];
   };
 };
 
-module.export = snakesAndLadder;
+module.exports = snakesAndLadder;
