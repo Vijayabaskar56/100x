@@ -1,0 +1,21 @@
+{
+  "name": "UI Assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive ./tests/index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
