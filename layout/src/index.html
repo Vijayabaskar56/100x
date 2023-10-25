@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100x-layout</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body class="bg-black font-['Inter']">
+    <div
+      class="flex-col md:flex-row flex h-screen w-screen md:gap-28 items-center justify-center"
+    >
+      <div class="flex-col">
+        <section
+          class="justify-center top-0 items-center md:items-end gap-0.5 py-3 flex"
+        >
+          <img
+            src="../public/images/100x-frame.svg"
+            alt="100x-logo"
+            class="md:w-w02 md:h-48 w-14 h-4"
+          />
+        </section>
+      </div>
+      <section
+        class="w-w03 h px-7 flex-col justify-start items-start gap-10 inline-flex my-auto"
+      >
+        <div
+          class="flex-col justify-start items-start gap-3 flex object-contain"
+        >
+          <h1
+            class="text-stone-50 text-fs02 md:text-fs01 whitespace-nowrap font-bold"
+          >
+            Happening now
+          </h1>
+          <h2 class="text-stone-50 text-base md:text-2xl font-bold">
+            Join today.
+          </h2>
+        </div>
+        <a href="./pages/screen02.html">
+          <button
+            class="bg-neutral50 text-neutral1000 w-w24 rounded-3xl text-center font-bold shadow-btnShadow backdrop-blur-2xl gap-2.5 px-6 py-2 hover:bg-neutral200 disabled:opacity-50"
+          >
+            Create account
+          </button>
+        </a>
+        <section class="w-80 h-5 justify-center items-center gap-1 inline-flex">
+          <span
+            class="grow shrink basis-0 h-px border border-neutral-700"
+          ></span>
+          <span class="text-center text-stone-50 text-base font-['Chirp']"
+            >or</span
+          >
+          <span
+            class="grow shrink basis-0 h-px border border-neutral-700"
+          ></span>
+        </section>
+        <section
+          class="self-stretch h-20 flex-col justify-start items-start gap-5 flex"
+        >
+          <p class="text-stone-50 md:text-xl font-medium font-['Inter']">
+            Already have an account?
+          </p>
+          <button
+            class="w-80 h-9 px-6 py-2 rounded-3xl shadow border border-twitterBlue border-opacity-25 backdrop-blur-2xl justify-center items-center gap-2.5 inline-flex text-twitterBlue"
+          >
+            Sign up
+          </button>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

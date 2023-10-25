@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="text-neutral50 bg-white font-['Inter']">
+    <section
+      class="w-full h-screen md:w-4/12 md:h-3/5 md:rounded-2xl bg-neutral1000 md:flex flex-col inline-flex items-center justify-between"
+    >
+      <div
+        class="self-stretch px-3.5 py-2.5 md:rounded-2xl flex-col justify-start items-start gap-3 inline-flex"
+      >
+        <div class="flex-col justify-center items-start gap-3 flex">
+          <div
+            class="self-stretch px-4 py-3 justify-start items-center gap-5 inline-flex"
+          >
+            <button>
+              <img src="/public/images/signup-x.svg" alt="" srcset="" />
+            </button>
+            <div class="text-neutral50 text-base font-bold">Step 3 of 4</div>
+          </div>
+        </div>
+        <section class="self-stretch flex-col justify-start gap-10">
+          <p class="text-stone-50 text-2xl font-bold pb-10">
+            We sent you a code
+            <span
+              class="w-96 text-neutral-500 block text-sm font-normal font-['Inter']"
+              >Enter it below to verify janedoe@gmail.com</span
+            >
+          </p>
+          <div class="flex-col justify-center items-center">
+            <section
+              action=""
+              class="inline-flex w-full flex-col gap-4 justify-between"
+            >
+              <div class="relative">
+                <div
+                  class="flex border-2 border-solid rounded-md border-neutral500 appearance-none group focus-within:border-blue-500"
+                >
+                  <input
+                    type="text"
+                    id="verfication-code"
+                    class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+                    placeholder=" "
+                  />
+                  <label
+                    for="verfication-code"
+                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+                    >Verficiation code</label
+                  >
+                </div>
+              </div>
+                <a
+                href="#"
+                  class="text-sky-500 text-right text-sm font-normal font-['Inter']"
+                  >Didn’t receive a code?</a
+                >
+=            </section>
+          </div>
+        </section>
+      </div>
+      <section class="flex-col justify-end items-start mx-auto pb-5 w-w03">
+        <div class="mx-4">
+          <a href="../pages/screen05.html">
+            <button
+              class="bg-neutral50 text-neutral1000 rounded-3xl w-full text-center shadow-btnShadow backdrop-blur-2xl gap-2.5 px-6 py-2 hover:bg-neutral200 disabled:opacity-50"
+            >
+              Next
+            </button>
+          </a>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

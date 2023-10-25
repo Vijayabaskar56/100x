@@ -24,33 +24,16 @@ const generateCombos = (n) => {
   }
 
   // rows
-  for (let i = 0; i < gridSize; i += n) {
-    const rowSequence = grid.slice(i, i + n);
-    combos.push(rowSequence);
-  }
+  rows();
 
   // columns
-  for (let i = 0; i < n; i++) {
-    let colSequence = [];
-    for (let j = i; j < gridSize; j += n) {
-      colSequence.push(grid[j]);
-    }
-    combos.push(colSequence);
-  }
+  columns();
 
   // diagonal one
-  let diagonalright = [];
-  for (let k = 0; k < gridSize; k += n + 1) {
-    diagonalright.push(grid[k]);
-  }
-  combos.push(diagonalright);
+  diagonalOne();
 
   //diagonla two
-  let diagonalleft = [];
-  for (let k = n - 1; k < gridSize - 1; k += n - 1) {
-    diagonalleft.push(grid[k]);
-  }
-  combos.push(diagonalleft);
+  diagonalTwo();
 
   // let gridSize = n * n;
   // let grid = [];
@@ -94,15 +77,49 @@ const generateCombos = (n) => {
   //   console.log(rows);
   //   return rows;
   // }
-  console.log(combos);
+  // console.log(combos);
+  
   return combos;
+
+  function diagonalTwo() {
+    let diagonalleft = [];
+    for (let k = n - 1; k < gridSize - 1; k += n - 1) {
+      diagonalleft.push(grid[k]);
+    }
+    combos.push(diagonalleft);
+  }
+
+  function diagonalOne() {
+    let diagonalright = [];
+    for (let k = 0; k < gridSize; k += n + 1) {
+      diagonalright.push(grid[k]);
+    }
+    combos.push(diagonalright);
+  }
+
+  function columns() {
+    for (let i = 0; i < n; i++) {
+      let colSequence = [];
+      for (let j = i; j < gridSize; j += n) {
+        colSequence.push(grid[j]);
+      }
+      combos.push(colSequence);
+    }
+  }
+
+  function rows() {
+    for (let i = 0; i < gridSize; i += n) {
+      const rowSequence = grid.slice(i, i + n);
+      combos.push(rowSequence);
+    }
+  }
 };
 
 const [_1, _2, sizeStr, ..._3] = process.argv;
 
 let size = Number(sizeStr);
-let combos = generateCombos(size);
-// let combos = generateCombos(2);
+// let combos = generateCombos(size);
+let combos = generateCombos(2);
 
 combos.forEach((combo) => {
   console.log(combo.join(","));

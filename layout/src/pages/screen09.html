@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User-profile-02</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="bg-black text-neutral50">
+    <header class="py-3 px-4 flex justify-between items-center">
+      <div class="flex gap-5">
+        <!-- Back arrow -->
+        <a href="/src/pages/screen08.html">
+          <img src="../../public/images/back.svg" alt="back-arrow-icon" />
+        </a>
+        <p>Edit Profile</p>
+      </div>
+      <a href="/src/pages/screen08.html">
+        <button
+          class="rounded-3xl text-center text-neutral1000 font-bold bg-neutral50 py-2 px-5 hover:bg-neutral200 disabled:opacity-50 backdrop-blur-2xl"
+        >
+          Save
+        </button>
+      </a>
+    </header>
+    <section class="inline-flex flex-col items-end justify-center gap-2 pb-3">
+      <div class="relative self-stretch">
+        <div
+          class="flex justify-center items-center gap-4 bg-transparent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-60"
+        >
+          <img
+            src="/public/images/material-symbols-add-a-photo-outline.svg"
+            alt="photo-icon"
+            class="p-2 bg-neutral900shade rounded-full cursor-pointer"
+          />
+          <img
+            src="/public/images/cancel.svg"
+            alt="cancel-icon"
+            class="p-2 bg-neutral900shade rounded-full cursor-pointer"
+          />
+        </div>
+        <img
+          src="/public/images/image-17.png"
+          alt="banner"
+          class="w-screen h-52"
+        />
+      </div>
+      <div class="absolute top-36 translate-y-1/2 left-4">
+        <img
+          src="/public/images/user-avatar.svg"
+          alt="user-dp"
+          class="w-24 h-24 rounded-full border-4 border-black"
+        />
+        <img
+          src="/public/images/material-symbols-add-a-photo-outline.svg"
+          alt="photo-icon"
+          class="p-2 rounded-full bg-neutral900shade text-neutral50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-60 cursor-pointer"
+        />
+      </div>
+    </section>
+    <main class="py-3 px-4 flex flex-col gap-5">
+      <section class="relative">
+        <input
+          type="text"
+          id="Name"
+          class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+          placeholder=" "
+          value="aarushe reddy"
+        />
+        <label
+          for="Name"
+          class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+          >Name</label
+        >
+      </section>
+      <section class="relative">
+        <textarea
+          name="bio"
+          id="bio"
+          cols="40"
+          rows="4"
+          class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+          placeholder=" "
+        >
+Digital Goodies Team - Web & Mobile UI/UX development; Graphics; Illustrations
+    </textarea
+        >
+        <!-- <input
+          type="text"
+          id="bio"
+          class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+          placeholder=" "
+          value="Digital Goodies Team - Web & Mobile UI/UX development; Graphics; Illustrations"
+        /> -->
+        <label
+          for="bio"
+          class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+          >Bio</label
+        >
+      </section>
+      <section class="relative">
+        <input
+          type="text"
+          id="location"
+          class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+          placeholder=" "
+        />
+        <label
+          for="location"
+          class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+          >Location</label
+        >
+      </section>
+      <section class="relative">
+        <input
+          type="text"
+          id="website"
+          class="block px-3 pb-2.5 pt-4 w-full text-sm outline-none text-gray-900 bg-black rounded-md border-2 border-solid border-neutral500 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer/name"
+          placeholder=" "
+        />
+        <label
+          for="website"
+          class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-2 peer-focus/name:px-2 peer-focus/name:text-blue-600 peer-focus/name:dark:text-blue-500 peer-placeholder-shown/name:scale-100 peer-placeholder-shown/name:-translate-y-1/2 peer-placeholder-shown/name:top-1/2 peer-focus/name:top-2 peer-focus/name:scale-75 peer-focus/name:-translate-y-4 left-1"
+          >Website</label
+        >
+      </section>
+    </main>
+  </body>
+</html>

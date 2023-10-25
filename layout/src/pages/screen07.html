@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="bg-black">
+    <div class="h-screen">
+      <header
+        class="flex justify-between px-4 py-3 border-solid border-b-2 border-b-neutral700"
+      >
+        <a href="/src/pages/screen06.html" class="inline-flex items-center">
+          <img src="/public/images/cancel.svg" alt="user-icon" />
+        </a>
+        <button
+          class="bg-twitterBlue text-center sm:w-24 md:w-56 lg:w-96 px-6 py-3 rounded-3xl gap-2.5 shadow-btnShadow backdrop-blur-2xl hover:bg-blue-600 disabled:opacity-50"
+        >
+          post
+        </button>
+      </header>
+      <section
+        class="py-2 px-4 inline-flex flex-row justify-center items-center gap-3"
+      >
+        <img
+          src="/public/images/user-avatar.svg"
+          alt="user-avatar"
+          class="inline"
+        />
+        <div>
+          <!-- TODO: add interaction  -->
+          <textarea
+            type="text"
+            name="tweerInput"
+            id="tweerInput"
+            cols="30"
+            rows="1"
+            class="bg-black focus:outline-none resize-y caret-twitterBlue text-neutral50 placeholder:text-neutral600"
+            placeholder="What's happening?!"
+          ></textarea>
+        </div>
+      </section>
+      <section
+        class="px-4 w-full bottom-0 absolute py-2 border-t-2 border-t-neutral800"
+      >
+        <p class="text-neutral-600" id="characteCheck">0/280</p>
+      </section>
+    </div>
+    <script>
+      const textarea = document.getElementById("tweerInput");
+      const characteCheck = document.getElementById("characteCheck");
+
+      textarea.addEventListener("input", function () {
+        this.rows = 1;
+        this.rows = Math.ceil(this.scrollHeight / this.clientHeight);
+      });
+    </script>
+  </body>
+</html>

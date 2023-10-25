@@ -643,6 +643,15 @@ video {
   width: 324px;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -824,6 +833,11 @@ video {
 .bg-searchbarFill {
   --tw-bg-opacity: 1;
   background-color: rgb(33 35 39 / var(--tw-bg-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-twitterBlue {
