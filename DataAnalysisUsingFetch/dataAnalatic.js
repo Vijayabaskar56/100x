@@ -1,59 +1,92 @@
 const email = "vj2k02@gmail.com";
 const url = `https://one00x-data-analysis.onrender.com/assignment?email=${email}`;
-// Getting the Assigment Id.
-let assigmentId;
-fetch(url)
-  .then((response) => response.headers.get("x-assignment-id"))
-  .then((data) => {
-    assigmentId = data;
-    console.log(assigmentId);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
 
-// console.log(assigmentId)
-//  let  assigmentId = "345fe401-55ae-4c90-9e85-705eb4360464"
+const fetchData = async () => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error("Something went wrong", error);
+  }
+};
 
-// process the data
-
-fetch(url)
-  .then((response) => response.json())
-  .then((datas) => {
-    repeatedWord(datas);
-  })
-  .catch((error) => console.log(`Error: ${error}`));
-
-// collecting the count of each word in an array
-function repeatedWord(datas) {
-  let countArr = [];
-  for (let i = 0; i < datas.length; i++) {
-    let currentWord = datas[i];
-    let counts = 0;
-    for (let j = 0; j < datas.length; j++) {
-      if (currentWord == datas[j]) {
-        counts++;
-      }
+const getAssignmentId = async () => {
+  try {
+    const response = await fetch(url);
+    const assignmentId = response.headers.get("x-assignment-id");
+    if (!assignmentId) {
+      throw new Error("Assignment ID not found in response headers");
     }
-    countArr.push(counts);
+    return assignmentId;
+  } catch (error) {
+    throw new Error("Something went wrong", error);
+  }
+};
+
+function getMostUsedWords(datas) {
+  let countArr = {};
+  let mostUsedWord = "";
+  let maxCount = 0;
+
+  for (let i = 0; i < datas.length; i++) {
+    const currentWord = datas[i];
+    if (!countArr[currentWord]) {
+      countArr[currentWord] = 0;
+    }
+    countArr[currentWord]++;
+    if (countArr[currentWord] > maxCount) {
+      maxCount = countArr[currentWord];
+      mostUsedWord = currentWord;
+    }
   }
 
-  // filtering the max number
-  let maxCount = Math.max(...countArr);
-  // finding the max number index
-  let index = countArr.findIndex((count) => count === maxCount);
-
   console.log(
-    `Most Used Word by argon used in Acme Corp’s marketing material ${datas[index]}`
+    `Most Used Word by argon used in Acme Corp’s marketing material: ${mostUsedWord}`
   );
+
+  return mostUsedWord;
 }
 
-// "email\": \"jane@example.com\",\n    \"answer\": \"penetrate-the-market\",\n    \"assignment_id\": \"cbdaa118-734d-4105-90e2-6292b661df7a\"\n}\n"
+const dataAnalysis = async () => {
+  try {
+    const assignmentId = await getAssignmentId();
+    const datas = await fetchData();
+    const mostUsedWord = getMostUsedWords(datas);
+    const response = await postData(mostUsedWord, assignmentId);
+    console.log(assignmentId, mostUsedWord,response)
+
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+dataAnalysis();
+
+
+async function postData(mostUsedWord, assignmentId) {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: "vj2k02@gmail.com",
+      answer: mostUsedWord,
+      assignment_id: assignmentId,
+    }),
+  }).then((response) => response)
+    .then((data) => data)
+    .catch((error) => error);
+    
+    return response; 
+}
+
 
 const result = {
   email: "vj2k02@gmail.com",
-  answer: `${data[index]}`,
-  assignment_id: `${assigmentId}`,
+  answer: `learnings`,
+  assignment_id: `345fe401-55ae-4c90-9e85-705eb4360464`,
 };
 
 fetch(url, {
