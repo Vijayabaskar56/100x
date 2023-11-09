@@ -1,7 +1,8 @@
 # 100x Micro Blogging Platform
+(see the pdf for full details)
 
 **Author:** Vijayabaskar  
-**Platform:** Debian
+**House:** Debian
 
 ## Project Overview
 
